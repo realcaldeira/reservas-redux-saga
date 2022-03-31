@@ -7,13 +7,14 @@ import Routes from './routes';
 import Header from './components/Header';
 
 import store from './store';
+// import history from './services/history'
 
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter >
         <Header />
-        <Routes />
+        <Routes />  
       </BrowserRouter>
     </Provider>
   );
