@@ -31,16 +31,17 @@ export default function Home(){
           <li key={trip.id}>
             <img src={trip.image} alt={trip.title} />
             <strong>{trip.title}</strong>
-            <span> Status: {trip.status ? 'Disponivel' : 'Indisponivel'}</span>
 
             <button 
+              disabled={trip.status ? false : true}
               type='button' 
+              className={trip.status ? 'available' : 'unavailable'}
               onClick={()=>handleAdd(trip.id)}
             >
               <div>
                 <MdFlightTakeoff size={16} color="#FFF"/>
               </div>
-              <span>SOLICITAR RESERVA</span>
+              <span>{trip.status ? 'SOLICITAR RESERVA' : 'INDISPONIVEL'}</span>
             </button>
           </li>
         ))}

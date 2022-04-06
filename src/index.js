@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
     <App />
-  </Router>,
+  </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

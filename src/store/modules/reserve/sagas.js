@@ -19,7 +19,6 @@ function* addToReserve({ id }){
   if(amount > stockAmount){
     alert('Quantidade máxima atigida.');
     return;
-
   }
 
   if(tripExists){
